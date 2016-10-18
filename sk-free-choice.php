@@ -13,7 +13,7 @@
  * @package           Sk_Free_Choice
  *
  * @wordpress-plugin
- * Plugin Name:       SK Free Choice
+ * Plugin Name:       Sundsvalls Kommun - Fritt Val
  * Plugin URI:        http://github
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
