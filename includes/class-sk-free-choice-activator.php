@@ -31,6 +31,9 @@ class Sk_Free_Choice_Activator {
 	 */
 	public static function activate() {
 
+		require_once 'class-sk-nyko-data-updater.php';
+		SK_Nyko_Data_Updater::update_auto_complete_data();
+	
 	}
 
 }

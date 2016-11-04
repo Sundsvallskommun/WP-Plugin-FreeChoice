@@ -51,6 +51,7 @@ class Sk_Free_Choice_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+		add_filter('init', array($this, 'register_post_type'));
 
 	}
 
@@ -100,4 +101,23 @@ class Sk_Free_Choice_Admin {
 
 	}
 
+	public function register_post_type() {
+		
+		register_post_type( 'home_service',
+		    array(
+		      'labels' => array(
+		        'name' => __( 'Hemtjänstföretag' ),
+		        'singular_name' => __( 'Hemtjänstföretag')
+		      ),
+		      'public' => true,
+		      'has_archive' => true,
+		      'rewrite' => array('slug' => 'hemtjanstforetag'),
+		    )
+	  	);
+	  	
+	  	add_theme_support( 'post-thumbnails', array('home_service') );
+	}
+
+	
+	
 }

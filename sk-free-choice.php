@@ -30,6 +30,9 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+define('SK_FREE_DOMAIN', "sk-free-choice-domain");
+
+
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-sk-free-choice-activator.php
@@ -67,7 +70,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-sk-free-choice.php';
  * @since    1.0.0
  */
 function run_sk_free_choice() {
-
+	
 	$plugin = new Sk_Free_Choice();
 	$plugin->run();
 

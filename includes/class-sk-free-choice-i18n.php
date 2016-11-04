@@ -35,7 +35,7 @@ class Sk_Free_Choice_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'sk-free-choice',
+			SK_FREE_DOMAIN,
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

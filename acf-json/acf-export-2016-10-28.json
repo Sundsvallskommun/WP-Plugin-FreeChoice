@@ -1,0 +1,92 @@
+[
+    {
+        "key": "group_5812098fc7396",
+        "title": "Hemstj\u00e4nstf\u00f6retag - inst\u00e4llningar",
+        "fields": [
+            {
+                "key": "field_581209aa3f3ca",
+                "label": "Omr\u00e5de",
+                "name": "home_service_area",
+                "type": "checkbox",
+                "instructions": "Ange vilka omr\u00e5den utf\u00f6raren \u00e4r aktiv i",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Sundsvalls t\u00e4tort": "Sundsvalls t\u00e4tort",
+                    "Aln\u00f6": "Aln\u00f6",
+                    "S\u00e4ttna": "S\u00e4ttna",
+                    "Njurunda t\u00e4tort": "Njurunda t\u00e4tort",
+                    "Njurunda glesbygd": "Njurunda glesbygd",
+                    "Matfors": "Matfors",
+                    "St\u00f6de": "St\u00f6de",
+                    "Indal-Liden": "Indal-Liden"
+                },
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0
+            },
+            {
+                "key": "field_581313218c44a",
+                "label": "Bild",
+                "name": "home_service_pic",
+                "type": "image",
+                "instructions": "Bild som ska visas i s\u00f6kresultatet",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_58131d1c16963",
+                "label": "Dokument",
+                "name": "home_service_document",
+                "type": "url",
+                "instructions": "Ange url till dokument",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "home_service"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]

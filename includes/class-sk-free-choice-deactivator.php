@@ -30,7 +30,8 @@ class Sk_Free_Choice_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
+		
+		delete_option('sk-free-choice-nyko-list');
 	}
 
 }

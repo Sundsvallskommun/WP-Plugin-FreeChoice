@@ -2,3 +2,33 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
+
+.sk-free-choice-card-spacing {
+	margin-top: 0.75rem;
+}
+
+.sk-free-choice-company-img {
+	max-height: 150px;
+}
+
+.sk-free-choice-list-group {
+	list-style: none;
+	padding-left: 0;
+	border: 1px solid #e8e8ea;
+	border-bottom-right-radius:0.25rem;
+	border-bottom-left-radius:0.25rem;
+}
+
+.sk-free-choice-list-group li {
+	padding-left: 15px;
+}
+
+
+.selected {
+	background-color: #4caadd;
+}
+
+.free-choice-area-button {
+	margin-top: 10px;
+}
