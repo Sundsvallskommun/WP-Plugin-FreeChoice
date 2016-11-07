@@ -140,6 +140,22 @@ class Sk_Free_Choice {
 
 	}
 
+
+	/**
+	 * Setting up acf-json sync for acf fields.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param $paths
+	 *
+	 * @return array
+	 */
+	public function acf_json( $paths ) {
+		$paths []= plugin_dir_path( __FILE__ ) . 'acf-json';
+		return $paths;
+	}
+
+
 	/**
 	 * Register all of the hooks related to the admin area functionality
 	 * of the plugin.
@@ -169,6 +185,9 @@ class Sk_Free_Choice {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+
+
+		$this->loader->add_filter( 'acf/settings/load_json', $this, 'acf_json' );
 
 	}
 
