@@ -31,6 +31,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 define('SK_FREE_DOMAIN', "sk-free-choice-domain");
+define('SK_FREE_CHOICE_URL', plugin_basename(__FILE__) );
 
 
 /**

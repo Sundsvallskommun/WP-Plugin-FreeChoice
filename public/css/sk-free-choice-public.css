@@ -3,32 +3,98 @@
  * included in this file.
  */
 
+.free-choice-wrapper label{
+  font-weight: bold;
+}
 
+.sk-free-choice-card-spacing .card .card-header{
+  background: transparent;
+}
+.sk-free-choice-card-spacing .card .card-header h2{
+  margin-bottom: 0;
+
+}
+
+.sk-free-choice-card-spacing .card .card-header h2 span{
+  float: right;
+}
+
+.sk-free-choice-card-spacing .card .card-header h2 span img{
+  margin-left: 5px;
+}
+
+
+.sk-free-choice-card-spacing .list-title{
+  font-weight:bold;
+}
+
+.sk-free-choice-img{
+  padding: 2rem 0;
+
+}
+
+.sk-free-choice-list,
+.sk-free-choice-list-bullet{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.sk-free-choice-list li{
+  padding: 0 5px;
+}
+
+.sk-free-choice-list li:first-child{
+  padding-left: 0;
+}
+
+.sk-free-choice-list li,
+.sk-free-choice-list-bullet li{
+  float:left;
+  font-size: .9em;
+}
+
+
+
+
+.sk-free-choice-list-bullet li:after{
+  content: "\00B7";
+  padding: 0 5px;
+}
+.sk-free-choice-list-bullet li:first-child:after,
+.sk-free-choice-list-bullet li:last-child:after{
+  content: "";
+}
+
+
+.sk-free-choice-card-spacing .float-right{
+  float: right;
+}
 .sk-free-choice-card-spacing {
-	margin-top: 0.75rem;
+  margin-top: 0.90rem;
 }
 
 .sk-free-choice-company-img {
-	max-height: 150px;
+  max-height: 150px;
 }
 
 .sk-free-choice-list-group {
-	list-style: none;
-	padding-left: 0;
-	border: 1px solid #e8e8ea;
-	border-bottom-right-radius:0.25rem;
-	border-bottom-left-radius:0.25rem;
+  display: none;
+  list-style: none;
+  padding-left: 0;
+  border: 1px solid #e8e8ea;
+  border-bottom-right-radius:0.25rem;
+  border-bottom-left-radius:0.25rem;
 }
 
 .sk-free-choice-list-group li {
-	padding-left: 15px;
+  padding-left: 15px;
 }
 
 
 .selected {
-	background-color: #4caadd;
+  background-color: #4caadd;
 }
 
 .free-choice-area-button {
-	margin-top: 10px;
+  margin-top: 10px;
 }

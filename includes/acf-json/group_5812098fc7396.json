@@ -3,6 +3,98 @@
     "title": "Hemtj\u00e4nstf\u00f6retag - inst\u00e4llningar",
     "fields": [
         {
+            "key": "field_582096add89a3",
+            "label": "Gatuadress",
+            "name": "home_service_street_address",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_582096dfd89a4",
+            "label": "Postnummer",
+            "name": "home_service_postal",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 5
+        },
+        {
+            "key": "field_58209719d89a5",
+            "label": "Ort",
+            "name": "home_service_city",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5820967f533a4",
+            "label": "Telefonnummer",
+            "name": "home_service_phone",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5820973934876",
+            "label": "Webbplats",
+            "name": "home_service_webpage",
+            "type": "url",
+            "instructions": "Ange l\u00e4nk till utf\u00f6rarens webbplats.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_581209aa3f3ca",
             "label": "Omr\u00e5de",
             "name": "home_service_area",
@@ -33,6 +125,46 @@
             "return_format": "value"
         },
         {
+            "key": "field_5820922f073b8",
+            "label": "Tj\u00e4nster",
+            "name": "home_service_services",
+            "type": "checkbox",
+            "instructions": "Ange vilka tj\u00e4nster utf\u00f6raren har att erbjuda.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "service": "Service",
+                "care": "Omv\u00e5rdnad"
+            },
+            "default_value": [
+
+            ],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5821cdf63e175",
+            "label": "Valbara tj\u00e4nster",
+            "name": "home_service_services_selectable",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Ja, tj\u00e4nsterna \u00e4r valbara",
+            "default_value": 0
+        },
+        {
             "key": "field_581313218c44a",
             "label": "Bild",
             "name": "home_service_pic",
@@ -58,10 +190,10 @@
         },
         {
             "key": "field_58131d1c16963",
-            "label": "Dokument",
+            "label": "PDF Bilaga",
             "name": "home_service_document",
-            "type": "url",
-            "instructions": "Ange url till dokument",
+            "type": "file",
+            "instructions": "Ladda upp eventuell PDF bilaga med mer information om f\u00f6retaget.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -69,8 +201,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": ""
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "pdf"
         }
     ],
     "location": [
@@ -91,5 +226,5 @@
     "active": 1,
     "description": "",
     "menu_item_level": "all",
-    "modified": 1478509769
+    "modified": 1478610502
 }

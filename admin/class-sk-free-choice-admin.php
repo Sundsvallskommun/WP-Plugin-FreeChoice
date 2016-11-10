@@ -51,7 +51,8 @@ class Sk_Free_Choice_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-		add_filter('init', array($this, 'register_post_type'));
+
+		add_action('init', array( $this, 'register_post_type' ) );
 
 	}
 
@@ -106,8 +107,9 @@ class Sk_Free_Choice_Admin {
 		register_post_type( 'home_service',
 		    array(
 		      'labels' => array(
-		        'name' => __( 'Hemtjänstföretag' ),
-		        'singular_name' => __( 'Hemtjänstföretag')
+		      	'menu_name' => __('Hemtjänst'),
+		        'name' => __( 'Hemtjänstutförare' ),
+		        'singular_name' => __( 'Hemtjänstutförare')
 		      ),
 		      'public' => true,
 		      'has_archive' => true,
