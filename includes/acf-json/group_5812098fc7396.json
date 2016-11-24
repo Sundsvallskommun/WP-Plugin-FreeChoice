@@ -3,6 +3,22 @@
     "title": "Hemtj\u00e4nstf\u00f6retag - inst\u00e4llningar",
     "fields": [
         {
+            "key": "field_5821cdf63e175",
+            "label": "Avaktiverad",
+            "name": "home_service_unactive",
+            "type": "true_false",
+            "instructions": "Avaktivera en utf\u00f6rare f\u00f6r att f\u00f6r att d\u00f6lja utf\u00f6raren fr\u00e5n s\u00f6kresultaten.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Markera utf\u00f6rare som avaktiverad",
+            "default_value": 0
+        },
+        {
             "key": "field_582096add89a3",
             "label": "Gatuadress",
             "name": "home_service_street_address",
@@ -149,27 +165,11 @@
             "return_format": "value"
         },
         {
-            "key": "field_5821cdf63e175",
-            "label": "Valbara tj\u00e4nster",
-            "name": "home_service_services_selectable",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Ja, tj\u00e4nsterna \u00e4r valbara",
-            "default_value": 0
-        },
-        {
             "key": "field_581313218c44a",
-            "label": "Bild",
+            "label": "Bild\/logotype",
             "name": "home_service_pic",
             "type": "image",
-            "instructions": "Bild som ska visas i s\u00f6kresultatet",
+            "instructions": "Bild\/logotype som visas f\u00f6r utf\u00f6raren. T\u00e4nk p\u00e5 att besk\u00e4ra bilden innan uppladdning, maximal h\u00f6jd p\u00e5 bilden \u00e4r 100px.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -226,5 +226,5 @@
     "active": 1,
     "description": "",
     "menu_item_level": "all",
-    "modified": 1478610502
+    "modified": 1479992393
 }
