@@ -61,7 +61,7 @@ class Sk_Free_Choice_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/sk-free-choice-public.css', array(), $this->version, 'all' );
+		wp_register_style( 'sk-free-choice', plugin_dir_url( __FILE__ ) . 'css/sk-free-choice-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -73,12 +73,12 @@ class Sk_Free_Choice_Public {
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_script( $this->plugin_name . '-autocomplete', plugin_dir_url( __FILE__ ) . 'js/jquery.easy-autocomplete.min.js', 
+		wp_register_script( 'sk-free-choice-autocomplete', plugin_dir_url( __FILE__ ) . 'js/jquery.easy-autocomplete.min.js',
 			array( 'jquery' ),
 			 $this->version, false 
 		);
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/sk-free-choice-public.js', 
+		wp_register_script( 'sk-free-choice', plugin_dir_url( __FILE__ ) . 'js/sk-free-choice-public.js',
 			array( $this->plugin_name . '-autocomplete' ),
 			 $this->version, false 
 		);
@@ -159,8 +159,16 @@ class Sk_Free_Choice_Public {
 	}
 
 
-	public static function free_choice_short_code() {
+	public function free_choice_short_code() {
+
+		wp_enqueue_style( 'sk-free-choice' );
+		wp_enqueue_script( 'sk-free-choice-autocomplete' );
+		wp_enqueue_script( 'sk-free-choice' );
+
+
 		ob_start();
+
+
 		require_once 'partials/sk-free-choice-public-display.php';
 		$content = ob_get_clean();
 		return $content;
