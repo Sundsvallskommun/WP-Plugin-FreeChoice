@@ -80,20 +80,27 @@ ini_set( 'display_errors', 'On' );
 
 		$home_service_companies = get_posts( $args );
 
-		foreach ( $home_service_companies as $item ) {
+		foreach ( $home_service_companies as $key => $item ) {
 
-			$item->free_choice = array(
-				'street_address'      => get_field( 'home_service_street_address', $item->ID ),
-				'postal'              => get_field( 'home_service_postal', $item->ID ),
-				'city'                => get_field( 'home_service_city', $item->ID ),
-				'phone'               => get_field( 'home_service_phone', $item->ID ),
-				'webpage'             => get_field( 'home_service_webpage', $item->ID ),
-				'areas'               => get_field( 'home_service_area', $item->ID ),
-				'services'            => get_field( 'home_service_services', $item->ID ),
-				'services_selectable' => get_field( 'home_service_services_selectable', $item->ID ),
-				'picture'             => get_field( 'home_service_pic', $item->ID ),
-				'document'            => get_field( 'home_service_document', $item->ID )
-			);
+			// check for unactive and remove, best would be to set the post to draft but ...
+			$unactive = get_field( 'home_service_unactive', $item->ID );
+			if( $unactive ){
+				unset( $home_service_companies[$key]);
+			} else {
+
+				$item->free_choice = array(
+					'street_address'      => get_field( 'home_service_street_address', $item->ID ),
+					'postal'              => get_field( 'home_service_postal', $item->ID ),
+					'city'                => get_field( 'home_service_city', $item->ID ),
+					'phone'               => get_field( 'home_service_phone', $item->ID ),
+					'webpage'             => get_field( 'home_service_webpage', $item->ID ),
+					'areas'               => get_field( 'home_service_area', $item->ID ),
+					'services'            => get_field( 'home_service_services', $item->ID ),
+					'services_selectable' => get_field( 'home_service_services_selectable', $item->ID ),
+					'picture'             => get_field( 'home_service_pic', $item->ID ),
+					'document'            => get_field( 'home_service_document', $item->ID )
+				);
+			}
 		}
 
 
