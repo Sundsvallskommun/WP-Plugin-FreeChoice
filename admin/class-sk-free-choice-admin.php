@@ -103,19 +103,29 @@ class Sk_Free_Choice_Admin {
 	}
 
 	public function register_post_type() {
-		
+
 		register_post_type( 'home_service',
-		    array(
-		      'labels' => array(
-		      	'menu_name' => __('Hemtjänst'),
-		        'name' => __( 'Hemtjänstutförare' ),
-		        'singular_name' => __( 'Hemtjänstutförare')
-		      ),
-		      'public' => true,
-		      'has_archive' => true,
-		      'rewrite' => array('slug' => 'hemtjanstforetag'),
-		    )
-	  	);
+			array(
+				'labels'      => array(
+					'name'               => __( 'Utförare', 'skfc' ),
+					'singular_name'      => __( 'Hemtjänst', 'skfc' ),
+					'menu_name'          => __( 'Hemtjänst', 'skfc' ),
+					'name_admin_bar'     => __( 'Hemtjänst', 'skfc' ),
+					'add_new'            => __( 'Lägg till ny', 'skfc' ),
+					'add_new_item'       => __( 'Lägg till ny utförare', 'skfc' ),
+					'new_item'           => __( 'Ny utförare', 'skfc' ),
+					'edit_item'          => __( 'Ändra utförare', 'skfc' ),
+					'view_item'          => __( 'Visa utförare', 'skfc' ),
+					'all_items'          => __( 'Alla utförare', 'skfc' ),
+					'search_items'       => __( 'Sök utförare', 'skfc' ),
+					'not_found'          => __( 'Inga utförare funna.', 'skfc' ),
+					'not_found_in_trash' => __( 'Inga utförare finns i papperskorgen.', 'skfc' ),
+				),
+				'public'      => true,
+				'has_archive' => true,
+				'rewrite'     => array( 'slug' => 'hemtjanstutforare' ),
+			)
+		);
 	  	
 	  	add_theme_support( 'post-thumbnails', array('home_service') );
 	}
