@@ -32,7 +32,6 @@
 				</div>
 			<?php endif; ?>
 			<?php Sk_Free_Choice_Public::html_available_services( $company->free_choice ); ?>
-
 			<?php if ( $company->free_choice['picture'] !== null && $company->free_choice['picture'] !== false ) : ?>
 				<div class="clearfix sk-free-choice-img">
 					<img src="<?php echo $company->free_choice['picture']; ?>" alt="<?php echo $company->post_title; ?>"
@@ -41,8 +40,13 @@
 			<?php endif; ?>
 
 			<p class="card-text"><?php echo $company->post_content; ?></p>
+			<?php if( !empty( $company->free_choice['document']['url'] ) ) : ?>
 			<a target="_blank" href="<?php echo $company->free_choice['document']['url']; ?>"
 			   class="btn btn-secondary btn-rounded">Läs mer (pdf)</a>
+			<?php endif; ?>
+			<?php if( !empty( $company->free_choice['webpage'] ) ) : ?>
+				<a target="_blank" href="<?php echo $company->free_choice['webpage']; ?>" class="btn btn-secondary btn-rounded">Webbplats</a>
+			<?php endif; ?>
 		</div>
 	</div>
 
