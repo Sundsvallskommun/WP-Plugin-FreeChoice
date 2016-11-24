@@ -118,10 +118,6 @@ class Sk_Free_Choice_Public {
 					<?php if( ! empty( $print_services ) ) : ?>
 						<li><?php echo $print_services; ?></li>
 					<?php endif; ?>
-
-					<li class="list-title"><?php _e('Valbar: ', 'sk-tivoli'); ?></li>
-					<li><?php echo intval( $free_choices['services_selectable'] ) === 1 ? 'Ja' : 'Nej'; ?></li>
-
 				</ul>
 			</div>
 		</div><!-- .sk-free-choice-contact -->
