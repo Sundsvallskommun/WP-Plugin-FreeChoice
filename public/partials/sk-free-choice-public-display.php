@@ -28,7 +28,7 @@ ini_set( 'display_errors', 'On' );
 
 <div class="free-choice-wrapper">
 	<script type="text/javascript">
-		var freeChoiceSuggestions = '<?php echo get_option( SK_Nyko_Data_Updater::SK_FREE_CHOICE_DATA ); ?>';
+		var freeChoiceSuggestions = <?php echo get_option( SK_Nyko_Data_Updater::SK_FREE_CHOICE_DATA ); ?>;
 	</script>
 
 	<form method="post" id="freeChoiceForm">
